@@ -11,6 +11,9 @@ A free, privacy-first browser toolkit for generating random passwords, creating 
 - Curated links to NIST, CISA, OWASP and Have I Been Pwned.
 - No account, backend, analytics or API key required.
 
+## Bitcoin security
+The Bitcoin section provides wallet, recovery-phrase, device, transaction and scam-safety guidance with links to Bitcoin.org, Bitcoin Core, mempool.space and Blockstream. It does not connect to wallets, request seed phrases or private keys, sign transactions, or provide investment advice. Block explorers expose public on-chain information and do not establish whether an address is trustworthy.
+
 ## Run locally
 Open `index.html` from a static web server. For example:
 ```sh
