@@ -29,6 +29,20 @@
 <label for="breach-password">Enter a password to check</label><div class="output"><input id="breach-password" type="password" autocomplete="off" placeholder="Type password locally"><button id="toggle-password" class="icon-btn" type="button">Show</button></div>
 <button id="check-breach" class="secondary" type="button">Check breach database</button><p id="breach-result" class="hint" aria-live="polite">Nothing is checked until you press the button.</p>
 </section>
+
+<section class="panel bitcoin" id="bitcoin-security">
+<div class="panel-head"><div><p class="eyebrow">04 / BITCOIN SECURITY</p><h2>Protect your Bitcoin</h2></div><span class="tag">Self-custody safety</span></div>
+<p class="hint">Practical checks for protecting a Bitcoin wallet, recovery phrase and transactions. This section is educational: it does not connect to wallets, sign transactions or hold funds.</p>
+<div class="btc-grid">
+<article><h3>Recovery phrase</h3><ul><li>Never type your 12/24-word recovery phrase into a website, chat, form or support message.</li><li>Never photograph it or store it in cloud notes, email or screenshots.</li><li>Keep offline backups in secure, separate places. Protect them from theft, fire and water.</li><li>Anyone who gets the phrase can usually take the funds. Real support staff never need it.</li></ul></article>
+<article><h3>Wallet & device</h3><ul><li>Download wallet software only from the project's official site; verify signatures or checksums when provided.</li><li>Keep your operating system, wallet and hardware-wallet firmware updated.</li><li>Use a device PIN and a strong unique password where supported.</li><li>Consider a hardware wallet for significant savings; practise recovery before depositing funds.</li></ul></article>
+<article><h3>Before sending</h3><ul><li>Verify the full receiving address on the wallet device screen, not only the computer screen.</li><li>Clipboard malware can replace copied addresses. Check the first and last characters and independently verify the entire address.</li><li>Send a small test transaction first when appropriate; confirm network fees and destination.</li><li>Bitcoin transactions are generally irreversible. Confirm details before signing.</li></ul></article>
+<article><h3>Scam warning signs</h3><ul><li>Anyone promising guaranteed returns, urgent giveaways or doubling your Bitcoin is a scam risk.</li><li>Ignore unsolicited support messages and sponsored search results impersonating wallet providers.</li><li>Never share a recovery phrase, private key, wallet backup or remote access to your device.</li><li>Do not install unknown wallet apps, browser extensions or remote-support tools.</li></ul></article>
+</div>
+<div class="btc-links"><strong>Independent Bitcoin references</strong><a href="https://bitcoin.org/en/secure-your-wallet" target="_blank" rel="noopener noreferrer">Bitcoin.org wallet security ↗</a><a href="https://bitcoincore.org/en/doc/" target="_blank" rel="noopener noreferrer">Bitcoin Core documentation ↗</a><a href="https://mempool.space/" target="_blank" rel="noopener noreferrer">mempool.space block explorer ↗</a><a href="https://blockstream.info/" target="_blank" rel="noopener noreferrer">Blockstream explorer ↗</a></div>
+<p class="warning-note">Important: Never paste a seed phrase or private key into this toolkit or any online “wallet checker”. A block explorer can show public transaction data, but it cannot prove that a wallet or recipient is trustworthy.</p>
+</section>
+
 <section class="panel sources" id="sources"><div class="panel-head"><div><p class="eyebrow">04 / TRUSTED REFERENCES</p><h2>Security sources</h2></div><span class="tag">Official links</span></div>
 <p class="hint">These references are maintained as a curated directory. The breach database is queried live only when you request a check. This static app does not silently upload or background-scan passwords.</p>
 <ul id="source-list"></ul><p id="source-updated" class="tiny"></p>
