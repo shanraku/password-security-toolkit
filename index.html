@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#10101c"><meta name="description" content="A privacy-first password generator, passphrase maker and security toolkit. Passwords stay in your browser.">
+<title>Password Security Toolkit</title><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top"><a class="brand" href="#"><span class="brand-mark">⌑</span> SecureKit</a><a class="source-link" href="#sources">Security sources ↗</a></header>
+<main class="wrap">
+<section class="hero"><p class="eyebrow">PRIVACY-FIRST • OPEN SOURCE • FREE</p><h1>Your security.<br><span>In your hands.</span></h1><p class="intro">Generate strong passwords and memorable passphrases. Check password strength and, if you choose, check breach exposure without sending your password.</p><div class="privacy"><span>●</span> Password generation and strength checks run locally in this browser.</div></section>
+<section class="panel">
+<div class="panel-head"><div><p class="eyebrow">01 / GENERATOR</p><h2>Random password</h2></div><span class="tag">On-device</span></div>
+<label for="password">Generated password</label><div class="output"><input id="password" type="text" readonly autocomplete="off" spellcheck="false" placeholder="Your password appears here"><button id="copy" class="icon-btn" type="button" aria-label="Copy password">Copy</button></div>
+<div class="meter"><div id="strength-bar"></div></div><p id="strength" class="hint" aria-live="polite">Generate a password to estimate its strength.</p>
+<div class="controls"><label class="field">Length <strong id="length-value">20</strong><input id="length" type="range" min="8" max="64" value="20"></label><div class="checks"><label><input id="upper" type="checkbox" checked> Uppercase</label><label><input id="lower" type="checkbox" checked> Lowercase</label><label><input id="numbers" type="checkbox" checked> Numbers</label><label><input id="symbols" type="checkbox" checked> Symbols</label></div></div>
+<div class="actions"><button id="generate" class="primary" type="button">Generate password</button><button id="clear" class="secondary" type="button">Clear</button></div>
+</section>
+<section class="panel">
+<div class="panel-head"><div><p class="eyebrow">02 / PASSPHRASE</p><h2>Memorable phrase</h2></div><span class="tag">Random words</span></div>
+<div class="output"><input id="phrase" type="text" readonly placeholder="Your passphrase appears here"><button id="copy-phrase" class="icon-btn" type="button">Copy</button></div>
+<label class="field">Number of words <strong id="words-value">5</strong><input id="words" type="range" min="3" max="8" value="5"></label>
+<button id="generate-phrase" class="primary" type="button">Generate passphrase</button>
+<p class="hint">Words are selected using the browser's cryptographic random generator. Add a private separator or extra words if a service requires it.</p>
+</section>
+<section class="panel">
+<div class="panel-head"><div><p class="eyebrow">03 / BREACH CHECK</p><h2>Was a password exposed?</h2></div><span class="tag">Optional online check</span></div>
+<p class="hint">Uses the Have I Been Pwned Pwned Passwords k-anonymity range API. Only the first 5 characters of a SHA-1 hash are sent; your password and full hash are not sent. The lookup is optional.</p>
+<label for="breach-password">Enter a password to check</label><div class="output"><input id="breach-password" type="password" autocomplete="off" placeholder="Type password locally"><button id="toggle-password" class="icon-btn" type="button">Show</button></div>
+<button id="check-breach" class="secondary" type="button">Check breach database</button><p id="breach-result" class="hint" aria-live="polite">Nothing is checked until you press the button.</p>
+</section>
+<section class="panel sources" id="sources"><div class="panel-head"><div><p class="eyebrow">04 / TRUSTED REFERENCES</p><h2>Security sources</h2></div><span class="tag">Official links</span></div>
+<p class="hint">These references are maintained as a curated directory. The breach database is queried live only when you request a check. This static app does not silently upload or background-scan passwords.</p>
+<ul id="source-list"></ul><p id="source-updated" class="tiny"></p>
+</section>
+<footer><p>Built for everyone · MIT licensed · No account required</p><p>Never reuse passwords. Use a reputable password manager and enable multi-factor authentication where available.</p><a href="https://github.com/shanraku/password-security-toolkit">View source on GitHub ↗</a></footer>
+</main><script src="app.js"></script>
+</body></html>
